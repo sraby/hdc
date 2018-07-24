@@ -12,16 +12,16 @@
 
       gtag('config', 'UA-119775381-1');
     </script>
-
+    
     <link rel="icon" type="image/ico" href="icons/favicon.png">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="An online portfolio and contact form for Brooklyn-based cartographer and data journalist, Sam Raby.">
-    <meta name="keywords" content="Map,Mapping,GIS,Interactive,Media,Cartography,Data,Visualization,Advocacy,Storytelling">
-    <meta name="author" content="Sam Raby">
+    <meta name="description" content="The Housing Data Coalition (HDC) addresses common issues in using public data to support housing justice and tenant organizing in New York City. We hold monthly meetings that are open to all who share these values.">
+    <meta name="keywords" content="Housing,Data,Coalition,New York,NYC,Tenant,Organizing,Justice,Open Data">
+    <meta name="author" content="HDC">
 
-    <title>Sam Raby</title>
+    <title>NYC Housing Data Coalition</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -68,8 +68,7 @@
     <header class="masthead">
       <div class="container">
         <div class="intro-text">
-          <div class="intro-heading">Sam Raby</div>
-          <div class="intro-lead-in">Cartography | Data Viz | Storytelling | Advocacy</div>
+          <div class="intro-heading">Housing Data Coalition</div>
         </div>
       </div>
     </header>
@@ -79,12 +78,17 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Bio</h2>
+            <h2 class="section-heading">About Us</h2>
             <h3 class="section-subheading text-muted">
               <br>
-              <div><img class="headshot" src="img/headshot.jpg"></div>
               <div>
-                <p align="left"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I'm Sam Raby, a Brooklyn-based mapmaker and interactive media developer with four years experience designing web applications for social change. With a background in math and data analysis, I'm a strong believer that justice, advocacy, and storytelling should inform technology, and not the other way around. I work with GIS mapping, information design, oral history, and data journalism to tell complex stories to large audiences, and I am dedicated to bringing a critical perspective into the world of data and technology.
+                <p align="left"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Housing Data Coalition/Community (HDC) came together in 2017 to address common issues in using public data to support housing justice and tenant organizing in New York City. The first coalition members were drawn together from different types of work when they realized that they faced the same problem: data related to housing in New York City is relatively abundant but spread across many separate sources, making it difficult to connect information and make insights. Since then, HDC members have created several new tools to make data related to housing more accessible for organizers, researchers, and advocates. 
+                  <br>
+
+                HDC members are committed to advancing the right to housing for all New Yorkers and ending the displacement of low-income communities of color. We believe that the right to housing includes affordable, dignified housing within the communities that New Yorkers have created, and that this right is especially threatened by real estate speculation that causes displacement. [Statement about history of structural racism, other power inequalities that undergird NYC housing → tie to data and analytics particularly? → what we’re trying to accomplish/transform given this history]
+                  <br>
+                HDC holds monthly meetings that are open to all who share these values. Our meetings provide a space to meet others interested in housing data, to learn from each other, and to provide mutual support on current projects.
+
                 </p>
                 <br>
                 <p align="left" style="font-style:normal"> <b> Past Work:</b>
@@ -102,7 +106,11 @@
       </div>
     </section>
 
-    <!-- Portfolio Grid -->
+  <div id="gallery"></div>
+
+    <!-- Portfolio Grid
+
+
     <section class="bg-light" id="portfolio">
       <div class="container">
         <div class="row">
@@ -241,6 +249,8 @@
         </div>
       </div>
     </section>
+
+  -->
 
     <!-- Contact -->
     <section id="contact">
@@ -617,6 +627,14 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- Load our React component. -->
+    <script type="text/babel" src="gallery.js"></script>
+
 
   </body>
 
