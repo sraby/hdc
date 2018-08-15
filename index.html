@@ -3,18 +3,6 @@
 
   <head>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119775381-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-119775381-1');
-    </script>
-    
-    <link rel="icon" type="image/ico" href="icons/favicon.png">
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="The Housing Data Coalition (HDC) addresses common issues in using public data to support housing justice and tenant organizing in New York City. We hold monthly meetings that are open to all who share these values.">
@@ -36,6 +24,10 @@
     <!-- Custom styles for this template -->
     <link href="css/agency.css" rel="stylesheet">
 
+    <!-- React -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
 
   </head>
 
@@ -51,13 +43,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#bio">Bio</a>
+              <a class="nav-link js-scroll-trigger" href="#bio">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Tools Gallery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="#contact">Get In Touch</a>
             </li>
           </ul>
         </div>
@@ -74,183 +66,13 @@
     </header>
 
     <!-- Bio -->
-    <section id="bio">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">About Us</h2>
-            <h3 class="section-subheading text-muted">
-              <br>
-              <div>
-                <p align="left"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Housing Data Coalition/Community (HDC) came together in 2017 to address common issues in using public data to support housing justice and tenant organizing in New York City. The first coalition members were drawn together from different types of work when they realized that they faced the same problem: data related to housing in New York City is relatively abundant but spread across many separate sources, making it difficult to connect information and make insights. Since then, HDC members have created several new tools to make data related to housing more accessible for organizers, researchers, and advocates. 
-                  <br>
+    <section id="bio"></section>
+    <script type="text/babel" src="components/bio.js"></script>
 
-                HDC members are committed to advancing the right to housing for all New Yorkers and ending the displacement of low-income communities of color. We believe that the right to housing includes affordable, dignified housing within the communities that New Yorkers have created, and that this right is especially threatened by real estate speculation that causes displacement. [Statement about history of structural racism, other power inequalities that undergird NYC housing → tie to data and analytics particularly? → what we’re trying to accomplish/transform given this history]
-                  <br>
-                HDC holds monthly meetings that are open to all who share these values. Our meetings provide a space to meet others interested in housing data, to learn from each other, and to provide mutual support on current projects.
+    <!-- Portfolio Grid -->
 
-                </p>
-                <br>
-                <p align="left" style="font-style:normal"> <b> Past Work:</b>
-                  <a href="http://storymaps.arcgis.com/en/" target="_blank">Esri Story Maps</a>,
-                  <a href="https://www.blueraster.com/" target="_blank">Blue Raster</a>,
-                  <a href="https://www.curbed.com/" target="_blank">Curbed (Vox Media)</a><br>
-                  <b> Current:</b>
-                  <a href="http://596acres.org/" target="_blank">596 Acres</a>, 
-                  <a href="https://www.antievictionmap.com/" target="_blank">Anti-Eviction Mapping Project</a>,
-                  <a href="http://www.urbandisplacement.org/about" target="_blank">Urban Displacement Project</a></p>
-                </div>
-              </h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  <div id="gallery"></div>
-
-    <!-- Portfolio Grid
-
-
-    <section class="bg-light" id="portfolio">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Portfolio</h2>
-            <br>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal7">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/07-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>One Dollar Lots</h4>
-              <p class="text-muted">596 Acres</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal8">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/08-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Housing New York: Local Affordability</h4>
-              <p class="text-muted">Vox Media (Curbed)</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal9">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/09-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>AMI and the Affordability Gap</h4>
-              <p class="text-muted">Vox Media (Curbed)</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Placing Oral Histories</h4>
-              <p class="text-muted">Esri</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Relocation Map</h4>
-              <p class="text-muted">Anti-Eviction Mapping Project</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Oakland Community Power</h4>
-              <p class="text-muted">Anti-Eviction Mapping Project</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Living Wage Map</h4>
-              <p class="text-muted">Esri, MIT DUSP, Politico</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Katrina +10</h4>
-              <p class="text-muted">Esri, Smithsonian</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Income Inequality in American Cities</h4>
-              <p class="text-muted">Esri, Smithsonian</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  -->
+    <section id="gallery"></section>
+    <script type="text/babel" src="components/gallery.js"></script>
 
     <!-- Contact -->
     <section id="contact">
@@ -258,12 +80,12 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading">Get In Touch</h2>
-            <h3 class="section-subheading text-primary">Happy to provide consultations, discuss project ideas, or touch base for future partnerships. 
+            <h3 class="section-subheading text-primary"> We meet every third Wednesday of each month to discuss data issues, new tools, and more. Come join us! 
               </h3>
           </div>
         </div>
           <div class="col-lg-12 text-center">
-            <a href="mailto:sraby@wesleyan.edu" target="_blank"> <button class="btn btn-xl">Email Me</button> </a>
+            <a href="mailto:housingdatacoalition@gmail.com" target="_blank"> <button class="btn btn-xl">Contact Us</button> </a>
           </div>
       </div>
     </section>
@@ -276,18 +98,6 @@
             <span class="copyright"></span>
           </div>
           <div class="col-md-4">
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="https://github.com/sraby" target="_blank">
-                  <i class="fa fa-github"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/sam-raby-093612102/" target="_blank">
-                  <i class="fa fa-linkedin"></i>
-                </a>
-              </li>
-            </ul>
           </div>
           <div class="col-md-4">
             <ul class="list-inline quicklinks">
@@ -300,9 +110,41 @@
       </div>
     </footer>
 
-    <!-- Portfolio Modals -->
+    <!-- Portfolio Modals 
 
-    <!-- Modal 1 -->
+    <div className="portfolio-modal modal fade" tabIndex="-1" role="dialog" aria-hidden="false" id="portfolioModal1">
+            <div className="modal-dialog">
+              <div className="modal-content">
+                <div className="close-modal" data-dismiss="modal">
+                  <div className="lr">
+                    <div className="rl"></div>
+                  </div>
+                </div>
+                <div className="container">
+                  <div className="row">
+                    <div className="col-lg-8 mx-auto">
+                      <div className="modal-body">
+                        <h2>Who Owns What</h2>
+                        <p className="item-intro text-muted">A map of NYC land sold to developers for $1</p>
+                        <a href="https://whoownswhat.justfix.nyc/" target="_blank">
+                        <img className="img-fluid d-block mx-auto" src="img/portfolio/01-thumbnail.png" alt=""/> </a>
+                        <p align="left">The JustFix.nyc Who Owns What project is a new resource for community organizers and tenant leaders to demystify property ownership and shell company networks across New York City. The site utilizes a database of 200,000 other properties to connect the dots and discover other properties that your landlord might own or be associated with. Use this tool to discover what buildings in your neighborhood to organize in, what communities your landlord might be targeting, and if your building might be financially overleveraged.</p>
+                        <ul className="list-inline">
+                          <li>JustFix.nyc</li>
+                          <li>Contact: hello@justfix.nyc</li>
+                        </ul>
+                         <a href="https://whoownswhat.justfix.nyc/" target="_blank"> <button className="btn btn-primary">View it Live</button> </a>
+                        <button className="btn btn-primary" data-dismiss="modal" type="button">
+                          <i className="fa fa-times"></i>
+                          Close Project</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -314,299 +156,17 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>Placing Oral Histories</h2>
-                  <p class="item-intro text-muted">A Visualization of Four Syrian Refugees' Narratives of Displacement</p>
-                  <a href="https://storymaps.esri.com/stories/2017/oral-histories/index.html" target="_blank">
-                    <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg"  alt=""></a>
-                  <p align="left">Under contract with the Esri Story Maps team, I conducted seven in-person interviews with Syrian refugees living across Sweden, Holland, and Germany, and I compiled their stories into long-form digital archives incorporating spatial visualizations, text, and photography.</p>
-                  <ul class="list-inline">
-                    <li>Date: June - October 2017 </li>
-                    <li>Collaborators: Esri</li>
-                  </ul>
-                  <a href="https://storymaps.esri.com/stories/2017/oral-histories/index.html" target="_blank"> <button class="btn btn-primary">View it Live</button> </a>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>Relocation Map</h2>
-                  <p class="item-intro text-muted">Following the Lives of those Evicted from their Homes in San Francisco</p>
-                   <a href="http://antievictionmap.maps.arcgis.com/apps/MapJournal/index.html?appid=e9d1638ec7724e899325e88ad62d4089" target="_blank">
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt=""></a>
-                  <p align="left">This project, as part of the Anti-Eviction Mapping Project's effort to document the "dispossession of San Francisco Bay Area residents upon gentrifying landsapces," is a collection of maps tracking the relocation of a group of San Francisco residents evicted from their homes in 2012. All data comes from the Eviction Defense Collaborative. </p>
-                  <ul class="list-inline">
-                    <li>Date: May - June 2016</li>
-                    <li>Collaborators: Anti-Eviction Mapping Project</li>
-                  </ul>
-                  <a href="http://antievictionmap.maps.arcgis.com/apps/MapJournal/index.html?appid=e9d1638ec7724e899325e88ad62d4089" target="_blank"> <button class="btn btn-primary">View it Live</button> </a>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                        <i class="fa fa-times"></i>
-                        Close Project</button>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>Oakland Community Power</h2>
-                  <p class="item-intro text-muted">Crowd-sourced Mapping Tool for Building Community</p>
-                  <a href="https://antievictionmapd.maps.arcgis.com/apps/StoryMapCrowdsource/index.html?appid=0afabf23879a42f291deba308afc1831" target="_blank"> 
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt=""></a>
-                  <p align="left">This tool allows Oakland community members to create a colletive map of spaces that sustain the city. It was built with the Anti-Eviction Mapping Project to continue a process of engaging with local residents in the Bay Area to maintain community power.</p>
-                  <ul class="list-inline">
-                    <li>Date: June 2015</li>
-                    <li>Collaborators: Anti-Eviction Mapping Project</li>
-                  </ul>
-                  <a href="https://antievictionmapd.maps.arcgis.com/apps/StoryMapCrowdsource/index.html?appid=0afabf23879a42f291deba308afc1831" target="_blank"> <button class="btn btn-primary">View it Live</button> </a>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 4 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>Living Wage Map</h2>
-                  <p class="item-intro text-muted">Visualizing the "Living Wage" Gap Across the US</p>
-                  <a href="http://www.politico.com/magazine/politico50/2015/mark-bertolini-mary-kay-henry" target="_blank">
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt=""></a>
-                  <p align="left">Working with Esri, I partnered with MIT DUSP Professor Amy Glasmeier to visualize the “living wage” dataset, create static maps for Politico Magazine, and aid in the design of a custom application, now published by The Atlantic, Philadelphia Magazine, and Boston.com. <em> Note: Custom App discontinued </em> </p>
-                  <ul class="list-inline">
-                    <li>Date: August 2015</li>
-                    <li>Collaborators: Esri, MIT DUSP, Politico
-                  </ul>
-                  <a href="http://www.politico.com/magazine/politico50/2015/mark-bertolini-mary-kay-henry" target="_blank"> <button class="btn btn-primary">View it Live</button> </a>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 5 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>Katrina +10</h2>
-                  <p class="item-intro text-muted">Mapping a Decade of Change in New Orleans.</p>
-                  <a href="https://story.maps.arcgis.com/apps/MapSeries/index.html?appid=597d573e58514bdbbeb53ba2179d2359" target="_blank">
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt=""></a>
-                  <p align="left">"Katrina +10" is a series of maps I developed with Esri that follows the city of New Orleans through a decade of reshaping, rebuilding, and development post-Hurricane Katrina. The piece is published with Smithsonian Magazine.</p>
-                  <ul class="list-inline">
-                    <li>Date: July 2015</li>
-                    <li>Collaborators: Esri, Smithsonian</li>
-                  </ul>
-                  <a href="https://story.maps.arcgis.com/apps/MapSeries/index.html?appid=597d573e58514bdbbeb53ba2179d2359" target="_blank"> <button class="btn btn-primary">View it Live</button> </a>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 6 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>Income Inequality in American Cities</h2>
-                  <p class="item-intro text-muted"> Exploring Income Divides</p>
-                  <a href="https://story.maps.arcgis.com/apps/MapJournal/index.html?appid=da1123d074174a218da1f1548c4b7bf7" target="_blank">
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt=""> </a>
-                  <p align="left"> This project is a collection of seven narrative apps exploring income divides in major US cities, now published in Smithsonian Magazine.</p>
-                  <ul class="list-inline">
-                    <li>Date: June - July 2015</li>
-                    <li>Collaborators: Esri, Smithsonian</li>
-                  </ul>
-                   <a href="https://story.maps.arcgis.com/apps/MapJournal/index.html?appid=da1123d074174a218da1f1548c4b7bf7" target="_blank"> <button class="btn btn-primary">View it Live (Houston Map)</button> </a>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 7 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>One Dollar Lots</h2>
-                  <p class="item-intro text-muted">A map of NYC land sold to developers for $1</p>
-                  <a href="http://onedollarlots.org" target="_blank">
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/07-full.jpg" alt=""> </a>
-                  <p align="left"> Built for 596 Acres, this custom web tool maps out all land NYC sold—or plans to sell— to housing developers for $1 each. Pulling data from an aggregated database of city records and contracts, this mapping tool links users to critical information regarding each land sale and allows residents to imagine better uses for cheap public land.</p>
-                  <ul class="list-inline">
-                    <li>Date: October 2017 - March 2018</li>
-                    <li>Collaborators: 596 Acres</li>
-                  </ul>
-                   <a href="http://onedollarlots.org" target="_blank"> <button class="btn btn-primary">View it Live</button> </a>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 8 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>Housing New York: Local Affordability</h2>
-                  <p class="item-intro text-muted">How New York’s affordable apartments compare to neighborhood incomes</p>
-                  <a href="https://ny.curbed.com/2018/3/5/16923274/affordable-housing-new-york-median-income-map" target="_blank">
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/08-full.jpg" alt=""> </a>
-                  <p align="left"> Published through Curbed New York, this data-driven investigation offers a glimpse into who can actually afford New York City’s “affordable” apartments. The article was featured in the New York Times's daily roundup column among other publications.</p>
-                  <ul class="list-inline">
-                    <li>Date: January - March 2018</li>
-                    <li>Collaborators: Curbed</li>
-                  </ul>
-                   <a href="https://ny.curbed.com/2018/3/5/16923274/affordable-housing-new-york-median-income-map" target="_blank"> <button class="btn btn-primary">View it Live</button> </a>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 9 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>AMI and the Affordability Gap</h2>
-                  <p class="item-intro text-muted">Explaining "Area Median Income" and how the City of New York uses it to quantify affordable housing</p>
-                  <a href="https://ny.curbed.com/2017/12/21/16752942/affordable-housing-new-york-ami-interactive-map" target="_blank">
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/09-full.jpg" alt=""> </a>
-                  <p align="left"> As part of a series for Curbed New York, this article combined interviews with HUD and NYC HPD along with in-house data analysis/visualization, all in an effort to explain what "afforable" means in the context of NYC housing development.</p>
-                  <ul class="list-inline">
-                    <li>Date: October - December 2017</li>
-                    <li>Collaborators: Curbed</li>
-                  </ul>
-                   <a href="https://ny.curbed.com/2017/12/21/16752942/affordable-housing-new-york-ami-interactive-map" target="_blank"> <button class="btn btn-primary">View it Live</button> </a>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
-                </div>
+                <div className="modal-body">
+                        <h2>Who Owns What</h2>
+                        <p class="item-intro text-muted">JustFix.nyc</p>
+                        <a href="https://whoownswhat.justfix.nyc/" target="_blank">
+                        <img class="img-fluid d-block mx-auto" src="img/portfolio/01-thumbnail.png" alt=""/> </a>
+                        <p align="left">The JustFix.nyc Who Owns What project is a new resource for community organizers and tenant leaders to demystify property ownership and shell company networks across New York City. The site utilizes a database of 200,000 other properties to connect the dots and discover other properties that your landlord might own or be associated with. Use this tool to discover what buildings in your neighborhood to organize in, what communities your landlord might be targeting, and if your building might be financially overleveraged.</p>
+                         <a href="https://whoownswhat.justfix.nyc/" target="_blank"> <button class="btn btn-primary">Go to Who Owns What</button> </a>
+                        <button class="btn btn-primary" data-dismiss="modal" type="button">
+                          <i class="fa fa-times"></i>
+                          Close Project</button>
+                      </div>
               </div>
             </div>
           </div>
@@ -631,9 +191,6 @@
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-
-    <!-- Load our React component. -->
-    <script type="text/babel" src="gallery.js"></script>
 
 
   </body>
