@@ -15,7 +15,7 @@ const gallery_items = [{
 
 class GalleryItem extends React.Component {
   render() {
-    return (<div className="col-md-4 col-sm-6 portfolio-item">
+    return (<div className="col-md-4 col-sm-6 portfolio-item" onClick={this.props.handleClick}>
                 <a className="portfolio-link" data-toggle="modal" href={"#portfolioModal" + gallery_items[0].id}>
                   <div className="portfolio-hover">
                     <div className="portfolio-hover-content">
@@ -29,16 +29,22 @@ class GalleryItem extends React.Component {
                   <p className="text-muted">{gallery_items[0].org}</p>
                 </div>
               </div>);
-  }
+    }
 }
+
 
 class GalleryModal extends React.Component {
 
   render() {
-    return(<div className="portfolio-modal modal fade" tabIndex="-1" role="dialog" aria-hidden="false" id={"#portfolioModal" + gallery_items[0].id}>
+    return(<div className={"portfolio-modal modal fade "+(this.props.isOpen ? "show" : "")} 
+                tabIndex="-1" 
+                role="dialog" 
+                aria-hidden="true" 
+                id={"#portfolioModal" + gallery_items[0].id}
+                style={{ display: (this.props.isOpen ? "block" : "none")}}>
             <div className="modal-dialog">
               <div className="modal-content">
-                <div className="close-modal" data-dismiss="modal">
+                <div className="close-modal" onClick={this.props.closeButton}>
                   <div className="lr">
                     <div className="rl"></div>
                   </div>
@@ -55,7 +61,7 @@ class GalleryModal extends React.Component {
                         <a href={gallery_items[0].link} target="_blank"> 
                           <button className="btn btn-primary">Go to {gallery_items[0].title}</button>
                         </a>
-                        <button className="btn btn-primary" data-dismiss="modal" type="button">
+                        <button className="btn btn-primary" type="button">
                           <i className="fa fa-times"></i>
                           Close Project</button>
                       </div>
@@ -68,36 +74,50 @@ class GalleryModal extends React.Component {
         }
 }
 
-class GalleryList extends React.Component {
-    render() {
-        return (<section className="bg-light" id="portfolio">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12 text-center">
-                <h2 className="section-heading">{title}</h2>
-                <br/>
-              </div>
-            </div>
-            <div className="row"> 
-                  <GalleryItem />
-            </div>
-          </div>
-        </section>);
-      }
-}
-
-class GalleryModals extends React.Component {
-  render() {
-    return (<GalleryModal />);
-  }
-}
-
 class Gallery extends React.Component {
-  render() {
-    return (<div> <GalleryList /> 
-          //<GalleryModals />
-      </div>);
+
+  constructor (props) {
+    super(props);
+
+   this.state = {
+      showModal: false
+    };
   }
+ 
+  openModal = () => {
+    this.setState({showModal: true} );
+    $('body').addClass('modal-open');
+    console.log("opened modal");
+  };
+
+  closeModal = () => {
+    this.setState({showModal: false} );
+    $('body').removeClass('modal-open');
+  };
+
+  render() {
+        return (<div>
+                  <section className="bg-light" id="portfolio">
+                    <div className="container">
+                      <div className="row">
+                        <div className="col-lg-12 text-center">
+                          <h2 className="section-heading">{title}</h2>
+                          <br/>
+                        </div>
+                      </div>
+                      <div className="row"> 
+                            <GalleryItem handleClick={this.openModal} />
+                      </div>
+                    </div>
+                  </section>
+
+         <GalleryModal
+          isOpen = {this.state.showModal}
+          closeButton = {this.closeModal}
+           > </GalleryModal>
+        </div>
+        );
+      }
 }
 
 ReactDOM.render(
