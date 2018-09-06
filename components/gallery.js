@@ -80,7 +80,7 @@ class GalleryModal extends React.Component {
                         <a href={gallery_content[this.props.number].link} target="_blank"> 
                           <button className="btn btn-primary">Go to {gallery_content[this.props.number].title}</button>
                         </a>
-                        <button className="btn btn-primary" type="button">
+                        <button className="btn btn-primary" type="button" onClick={this.props.closeButton}>
                           <i className="fa fa-times"></i>
                           Close Project</button>
                       </div>
@@ -118,22 +118,18 @@ class Gallery extends React.Component {
   createGallery = () => {
     
     let galleryItems = [];
-    
     for (let i = 0; i < gallery_content.length; i++) {
         galleryItems.push(<GalleryItem key={i} number={i} handleClick={()=>{this.openModal(i)}} />)
     }
-
     return galleryItems;
   }
 
   createModals() {
     
     let modals = [];
-    
     for (let i = 0; i < gallery_content.length; i++) {
         modals.push(<GalleryModal key={i} number={i} isOpen={this.state.showModal} closeButton={()=>{this.closeModal()}} />)
     }
-
     return modals;
   }
 
