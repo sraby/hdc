@@ -1,10 +1,9 @@
-const title = "Tools Gallery";
+const title = "Resource Gallery";
 
-const subtitle = "";
+const subtitle = "A gallery of tools and resources created by Housing Data Coalition members";
 
 const gallery_content = [
       {
-        id: 0,
         title: "Who Owns What",
         org:"JustFix.nyc", //ADD THIS TO CONTENT MODEL
         image:"01-thumbnail.png",
@@ -14,7 +13,6 @@ const gallery_content = [
         contact:"hello@justfix.nyc"
       },
       {
-        id: 1,
         title: "Who Owns What 2",
         org:"JustFix.nyc1", //ADD THIS TO CONTENT MODEL
         image:"01-thumbnail.png",
@@ -28,7 +26,7 @@ const gallery_content = [
 class GalleryItem extends React.Component {
   render() {
     return (<div className="col-md-4 col-sm-6 portfolio-item" onClick={this.props.handleClick}>
-                <a className="portfolio-link" data-toggle="modal" href={"#portfolioModal" + gallery_content[this.props.number].id}>
+                <a className="portfolio-link" data-toggle="modal" href={"#portfolioModal" + this.props.number}>
                   <div className="portfolio-hover">
                     <div className="portfolio-hover-content">
                       <i className="fa fa-plus fa-3x"></i>
@@ -59,7 +57,7 @@ class GalleryModal extends React.Component {
                 tabIndex="-1" 
                 role="dialog" 
                 aria-hidden="true" 
-                id={"#portfolioModal" + gallery_content[this.props.number].id}
+                id={"#portfolioModal" + this.props.number}
                 style={{ display: ((this.props.isOpen == this.props.number) ? "block" : "none")}}>
             <div className="modal-dialog">
               <div className="modal-content">
@@ -141,6 +139,7 @@ class Gallery extends React.Component {
                       <div className="row">
                         <div className="col-lg-12 text-center">
                           <h2 className="section-heading">{title}</h2>
+                          <h3 className="section-subheading text-muted">{subtitle}</h3>
                           <br/>
                         </div>
                       </div>
